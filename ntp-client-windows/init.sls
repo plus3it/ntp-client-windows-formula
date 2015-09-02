@@ -30,3 +30,9 @@ w32tm_type:
 w32tm_service:
   service.running:
     - name: 'W32Time'
+    - onchanges_in:
+      - cmd: w32tm_resync
+
+w32tm_resync:
+  cmd.run:
+    - name: 'w32tm /resync /rediscover /nowait'
