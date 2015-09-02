@@ -1,6 +1,6 @@
 {%- from "ntp-client-windows/map.jinja" import time with context %}
 
-specialpollinterval:
+w32tm_specialpollinterval:
   reg.present:
     - name: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient\SpecialPollInterval'
     - value: {{ time.specialpollinterval }}
@@ -9,7 +9,7 @@ specialpollinterval:
     - watch_in:
       - service: timeservice
 
-ntpserver:
+w32tm_ntpserver:
   reg.present:
     - name: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer'
     - value: {{ time.servers }}
@@ -18,7 +18,7 @@ ntpserver:
     - watch_in:
       - service: timeservice
 
-type:
+w32tm_type:
   reg.present:
     - name: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\Type'
     - value: 'NTP'
@@ -27,6 +27,6 @@ type:
     - watch_in:
       - service: timeservice
 
-timeservice:
+w32tm_service:
   service.running:
     - name: 'W32Time'
