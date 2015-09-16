@@ -35,4 +35,4 @@ w32tm_service:
 
 w32tm_resync:
   cmd.run:
-    - name: 'w32tm /resync /rediscover /nowait'
+    - name: 'w32tm /config /update'
