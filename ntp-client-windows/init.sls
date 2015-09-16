@@ -7,7 +7,7 @@ w32tm_specialpollinterval:
     - vtype: 'REG_DWORD'
     - reflection: False
     - watch_in:
-      - service: timeservice
+      - service: w32tm_service
 
 w32tm_ntpserver:
   reg.present:
@@ -16,7 +16,7 @@ w32tm_ntpserver:
     - vtype: 'REG_SZ'
     - reflection: False
     - watch_in:
-      - service: timeservice
+      - service: w32tm_service
 
 w32tm_type:
   reg.present:
@@ -25,7 +25,7 @@ w32tm_type:
     - vtype: 'REG_SZ'
     - reflection: False
     - watch_in:
-      - service: timeservice
+      - service: w32tm_service
 
 w32tm_service:
   service.running:
