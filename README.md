@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/plus3it/ntp-client-windows-formula.svg)](https://travis-ci.org/plus3it/ntp-client-windows-formula)
+
 # ntp-client-windows-formula
 Salt formula to configure the Windows Time Service to sync with one or more
 NTP servers.
