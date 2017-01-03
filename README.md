@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/plus3it/ntp-client-windows-formula.svg)](https://travis-ci.org/plus3it/ntp-client-windows-formula)
+[![license](https://img.shields.io/github/license/plus3it/ntp-client-windows-formula.svg)](./LICENSE)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/plus3it/ntp-client-windows-formula?branch=master&svg=true)](https://ci.appveyor.com/project/plus3it/ntp-client-windows-formula)
 
 # ntp-client-windows-formula
 Salt formula to configure the Windows Time Service to sync with one or more
@@ -57,7 +58,7 @@ how frequently to sync
 
 As these are hex values, they may be bitwise OR'd to combine possible
 configurations. Only '0x8' and '0x4' are mutually exclusive. i.e. '0x9' means
-the service will use the '0x1' and '0x8' flags. 
+the service will use the '0x1' and '0x8' flags.
 
 For more information, see the Technet article linked at the top of the Readme.
 
